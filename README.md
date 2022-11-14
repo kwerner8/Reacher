@@ -67,38 +67,6 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 
 
-## Model architecture and hyperparameters
-
-The model architectures for the two neural networks used for the Actor and Critic are as follows:
-
-Actor:
-* Fully connected layer 1: Input 24 (state space of one agent), Output 256, RELU activation, Batch Normalization
-* Fully connected layer 2: Input 256, Output 128, RELU activation
-* Fully connected layer 3: Input 128, Output 2 (action space), TANH activation
-
-Critic:
-* Fully connected layer 1: Input 2*24 (state space of both agents), Output 256, RELU activation, Batch Normalization
-* Fully connected layer 2: Input 2*24+2*2, Output 128, RELU activation, Input Layer1 and actions of both agents
-* Fully connected layer 3: Input 128, Output 1
-
-## Hyperparameters
-
-```
-BUFFER_SIZE = int(1e6)        # replay buffer size
-BATCH_SIZE = 256              # minibatch size
-GAMMA = 0.999                 # discount factor
-TAU = 8e-3           	      # for soft update of target parameters
-LR_ACTOR = 1e-4      	      # learning rate of the actor 
-LR_CRITIC = 3e-4      	      # learning rate of the critic
-WEIGHT_DECAY = 0.0    	      # L2 weight decay
-LEARN_EVERY = 1       	      # learning timestep interval
-LEARN_NUM = 5         	      # number of learning passes
-START_LEARN = 500      	      # number of episodes before starting to learn
-NOISE_REDUCTION_RATE = 0.99
-NOISE_START=1.0
-NOISE_END=0.01
-```
-
 ## Reference
 
 https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control
