@@ -31,6 +31,8 @@ The algorithm uses two deep neural networks (actor-critic) with the following st
 ## Results and Future Work
 The current model achieved quite good results. The task was solved after 842 episodes. The score increased more or less monotonously. During the subsequent testing of the algorithm, scores above 30 were frequently achieved
 
+<img width="400" alt="Bildschirmfoto 2022-11-14 um 22 57 27" src="https://user-images.githubusercontent.com/100682506/201776617-0906a333-c4ba-4c36-b324-2f31c6b71d08.png">
+
 
 I plan to now implement the D4PG for the 20 parallel agents. Then I would like test it in both environments, the reacher and the crawler.
 The goal is to find when and where each of the algorithms have the best performance.
